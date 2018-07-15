@@ -4,7 +4,7 @@
 #include "stepper_controller.h"
 #include <stdlib.h>
 #include "nonvolatile.h"
-#include "reset.h"
+// #include "reset.h"
 #include "nzs.h"
 #include "ftoa.h"
 #include "board.h"
@@ -278,9 +278,10 @@ static int home_cmd(sCmdUart *ptrUart,int argc, char * argv[])
 }
 #endif
 
+//https://forum.pjrc.com/threads/24304-_reboot_Teensyduino%28%29-vs-_restart_Teensyduino%28%29?highlight=teensy+reboot
 static int reboot_cmd(sCmdUart *ptrUart,int argc, char * argv[])
 {
-	NVIC_SystemReset();
+	WRITE_RESTART(0x5FA0004);
 	return 0;
 }
 

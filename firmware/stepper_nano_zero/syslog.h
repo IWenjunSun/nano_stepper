@@ -20,7 +20,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "Arduino.h"
-#include "variant.h"
+// #include "variant.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -99,7 +99,7 @@ _60, _61, _62, _63, ...) _63
 #define ADD_SECOND_ARGUMENT2(x, z, y) y, x, z
 #define INSERT_SECOND_ARGUMENT2(x, z, y, ...) y, x, z, __VA_ARGS__
 
-#endif 
+#endif
 //#define DEBUG1(...) printf( "DEBUG %s %s: "
 //PROVIDE_SECOND_ARGUMENT2(__FILE__, __LINE__, __VA_ARGS__))
 
